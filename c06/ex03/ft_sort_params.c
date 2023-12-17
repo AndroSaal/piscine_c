@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         return 0;
     printf("%s", "OK0\n");
     ft_sort_params(argv, argc);
-    printf("%s\n", "OK_sort");
+    // printf("%s\n", "OK_sort");
     while(i < argc)
     {
         ft_print_params(argv[i]);
@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
             write(1, "\n", 1);
         i++;
     }
-    printf("%s\n", "OK_main");
     return 0;
 }
 
