@@ -1,29 +1,30 @@
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
-int ft_abs(int nbr);
+int memory(int min, int max);
 
 int     *ft_range(int min, int max)
 {
-    int i = min;
-    int j = 0;
-    int *arr = NULL;
-
-    if(min >= max)
-        return(arr);
-    arr = (int *) malloc(sizeof(int) *(ft_abs(max) - ft_abs(min) + 2));
-    while (i <= max)
+    int i = 0;
+    int *A = (int *)malloc(memory(min, max)*sizeof(int));
+    if (NULL == A)
+        return(0);
+    while (i != memory(min, max) + 1)
     {
-        arr[j] = i;
+        A[i] = min + i;
         i++;
-        j++;
     }
-    return(arr);
+    return(A);
 }
 
-int ft_abs(int nbr)
+int memory(int min, int max)
 {
-    if (nbr < 0)
-        nbr *= -1;
-    return (nbr);
-}      
-
+    int i = 0;
+    while (max >= min)
+    {
+        i++;
+        max--;
+    }
+    return (i);
+} 

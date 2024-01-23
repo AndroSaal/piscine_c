@@ -18,10 +18,10 @@ void ft_putnbr(int* nbr)
     while (nbr[i] != '\0')
     {
         printf("%d, ", nbr[i]);
-        nbr[i] -= '0';
-        write(1, &nbr[i], 1);
-        if (nbr[i+1] != '\0')
-            write(1, ", ", 2);
+        // nbr[i] = '0';
+        // write(1, &nbr[i] + '0', 1);
+        // if (nbr[i+1] != '\0')
+        //     write(1, ", ", 2);
         i++;
     }
 }
