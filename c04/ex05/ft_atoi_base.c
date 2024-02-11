@@ -48,9 +48,7 @@ int ft_check_base_out(char *base)
                 }
                 j++;
             }
-        }
-        else
-        {
+        } else {
             return(0);
         }
         i++;
